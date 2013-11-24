@@ -1,0 +1,16 @@
+<html>
+<body>
+    <div>
+    <ul>
+    {% for book in books %}
+        <li>
+        <p>书名 <a href="{{book['link']}}">{{ book['title'] }} </a></p>
+            {% if book.get('desc') %}
+            <p>梗概 {{ book['desc'] }} </p>
+            {% end %}
+        </li> 
+    {% end %}
+    </ul>
+    </div>
+</body>
+</html>
